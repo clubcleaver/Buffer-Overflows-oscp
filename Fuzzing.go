@@ -10,8 +10,8 @@ import (
 
 func main() {
 	//define Target IP and Port
-	IP := "192.168.1.105"
-	PORT := "1985"
+	IP := "192.168.1.105" //change this
+	PORT := "1985" //change this
 	
 	//define buffer
 	bufferAlphabet := "A"
@@ -36,6 +36,6 @@ func main() {
 		}
 		fmt.Println("Bytes Written: ", bytesWritten)
 		time.Sleep(5 * time.Second)
-		i += 100
+		i += 100 //change the multiplier if needed
 	}
 }
