@@ -29,13 +29,13 @@ func main() {
 	i := minToSend
 	for i <= maxToSend {
 		buffer := strings.Repeat(bufferAlphabet, i)
-		finalBuffer := buffer + "\x00"
+		finalBuffer := buffer + "\x00" //the return ending character was added for a specific usecase. can be removed if needs be.
 		bytesWritten, err := conn.Write([]byte(finalBuffer))
 		if err != nil {
 			fmt.Println("could not write payload")
 		}
 		fmt.Println("Bytes Written: ", bytesWritten)
 		time.Sleep(5 * time.Second)
-		i += 100 //change the multiplier if needed
+		i += 100 //change the increment value if needed here
 	}
 }
